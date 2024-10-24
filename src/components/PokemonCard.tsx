@@ -9,11 +9,13 @@ interface pokemonProps {
 function PokemonCard({pokemon}:pokemonProps){
 
   return(
-    <figure>
-      {pokemon.imgSrc ? <img src={pokemon.imgSrc} alt="" /> : <p>???</p>}
-      
-      <figcaption>{pokemon.name}</figcaption>
-    </figure>
+    
+      <figure>
+        {pokemon.imgSrc ? <img src={pokemon.imgSrc} alt="" /> : <p>???</p>}
+        
+        <figcaption>{pokemon.name}</figcaption>
+      </figure>
+    
 )
 };
 
