@@ -5,7 +5,10 @@ body {
 #root {
   display: flex;
   align-items: center;
+  position: absolute;
 }
+
+
 
 figure {
   display: flex;
@@ -15,6 +18,7 @@ figure {
   padding: 0 0 2rem 0;
   gap: 5rem;
   border-radius: 1.5rem;
+
 }
 
 figure img {
@@ -32,4 +36,5 @@ button {
   font-size: 1rem;
   font-weight: bold;
   color: aliceblue;
+  position: relative;
 }
