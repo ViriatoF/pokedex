@@ -1,26 +1,27 @@
-import { MouseEventHandler } from "react";
+
 
 interface Pokemon {
+  id: number;
   name: string;
   imgSrc?: string;
 }
 
 interface NavBarProps {
-  pokemonIndex: number;
-  setPokemonIndex: (index: number) => void;
   pokemonList: Pokemon[];
-  handleClickNext: MouseEventHandler;
-  handleClickReturn: MouseEventHandler
+  handleClickChangePoke: (name: string) => void;
 }
 
-function NavBar({ pokemonIndex, pokemonList,handleClickNext, handleClickReturn } : NavBarProps) {
+function NavBar({pokemonList, handleClickChangePoke } : NavBarProps) {
+
 
   return(
 
     <>
-      
-      {pokemonIndex > 0 ? <button onClick={handleClickReturn}> Précédent</button> : ""}
-      {pokemonIndex < pokemonList.length - 1? <button onClick={handleClickNext}> Suivant</button> : ""}
+      {pokemonList.map((el) =>{
+        return(
+          <button key={el.name} onClick={() => handleClickChangePoke(el.name)}>{el.name}</button>
+        )
+      })}
     
     </>
     

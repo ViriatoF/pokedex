@@ -1,6 +1,7 @@
 interface pokemonProps {
   Pokemon:
   {
+    id: number;
     name : string;
     imgSrc? : string;
   };
