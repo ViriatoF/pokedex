@@ -1,6 +1,6 @@
 import "./App.css";
 import "./assets/card.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import PokemonCard from "./components/PokemonCard";
 
@@ -33,6 +33,13 @@ const pokemonList =[
 
 function App() {
 
+  useEffect(()=>{
+
+    alert("hello pokemon trainer :)")
+  },
+  []
+  )
+
   const [pokemonIndex, SetPokemonIndex] = useState(0);
   console.log(pokemonIndex);
   
@@ -51,7 +58,7 @@ function App() {
   return (
     <>
       {pokemonIndex >0 ? <button onClick={handleClickReturn}> Précédent</button> : ""}
-      <PokemonCard pokemon={pokemonList[pokemonIndex]}/>
+      <PokemonCard Pokemon={pokemonList[pokemonIndex]}/>
       {pokemonIndex < pokemonList.length - 1? <button onClick={handleClickNext}> Suivant</button> : ""}
     </>
   );

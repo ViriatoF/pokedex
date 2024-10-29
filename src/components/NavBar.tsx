@@ -18,6 +18,7 @@ function NavBar({ pokemonIndex, pokemonList,handleClickNext, handleClickReturn }
   return(
 
     <>
+      
       {pokemonIndex > 0 ? <button onClick={handleClickReturn}> Précédent</button> : ""}
       {pokemonIndex < pokemonList.length - 1? <button onClick={handleClickNext}> Suivant</button> : ""}
     
